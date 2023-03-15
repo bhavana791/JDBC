@@ -9,13 +9,37 @@ public class JDBC {
 
 	public static void main(String[] args) 
 	{
+		Scanner scanner = new Scanner(System.in);
 		// TODO Auto-generated method stub
 		JDBC obj=new JDBC();
-		//obj.db_create();
-		//obj.table_create();
-		//obj.insert();
-		//obj.delete_data();
-		obj.update();
+		int choice = 0;
+		do {
+			
+			System.out.println("Enter Your choice \n 1]create database 2]create table 3]insert 4]delete 5]update ");
+			 choice = scanner.nextInt();
+			switch(choice) {
+			case 1:
+				obj.db_create();
+			break;
+			
+			case 2:
+				obj.table_create();
+			break;
+			case 3:
+				obj.insert();
+			break;
+			case 4:
+				obj.delete_data();
+			break;
+			case 5:
+				obj.update();
+			break;
+			
+			
+			}
+			}while(choice!=0);
+		
+		
 	}
 	
 	public void db_create()
